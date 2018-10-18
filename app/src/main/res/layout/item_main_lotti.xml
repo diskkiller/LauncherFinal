@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhongti.huacailauncher.widget.bamUI.BamCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:elevation="@dimen/x8"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/main_yellow"
+    app:cardCornerRadius="@dimen/x10"
+    app:open_super="true">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="300px"
+
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_item_main_lotti_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3px"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/x10"
+            tools:src="@color/gray" />
+
+        <ImageView
+            android:layout_width="85px"
+            android:layout_height="85px"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_home_lotti_item_yuan" />
+
+        <TextView
+            android:id="@+id/tv_item_home_lotti_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="10px"
+            android:textColor="@color/white"
+            android:textSize="16px"
+            tools:text="面值" />
+
+        <TextView
+            android:id="@+id/tv_item_home_lotti_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_item_home_lotti_price_text"
+            android:layout_below="@id/tv_item_home_lotti_price_text"
+            android:textColor="@color/white"
+            android:textSize="22px"
+            android:textStyle="bold"
+            tools:text="20" />
+
+        <TextView
+            android:id="@+id/tv_item_home_lotti_price_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_item_home_lotti_price"
+            android:layout_marginBottom="4px"
+            android:layout_marginLeft="3px"
+            android:layout_toRightOf="@id/tv_item_home_lotti_price"
+            android:textColor="@color/white"
+            android:textSize="12px"
+            tools:text="元" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhongti.huacailauncher.widget.bamUI.BamCardView>

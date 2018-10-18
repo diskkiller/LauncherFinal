@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhongti.huacailauncher.widget.auto.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    app:cardCornerRadius="@dimen/x10"
+    app:cardElevation="@dimen/x8">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_home_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/x10" />
+
+</com.zhongti.huacailauncher.widget.auto.AutoCardView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhongti.huacailauncher.widget.bamUI.BamCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:elevation="@dimen/x8"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/x10"
+    app:open_super="true">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="300px"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_item_lottery_fun_play_thumb"
+            android:layout_width="300px"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/x10"
+            tools:src="@color/black2" />
+
+        <TextView
+            android:id="@+id/iv_item_lottery_fun_play_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11px"
+            android:layout_marginTop="10px"
+            android:textColor="@color/white"
+            android:textSize="16px"
+            tools:text="已有2000人玩过" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhongti.huacailauncher.widget.bamUI.BamCardView>

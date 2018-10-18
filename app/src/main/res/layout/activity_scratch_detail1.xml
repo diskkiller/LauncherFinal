@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_scatch_detail1" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl__scratch_rule_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl__scratch_detail_root_left"
+            android:layout_width="1352px"
+            android:layout_height="956px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="72px"
+            android:background="@drawable/bg_scratch_detail_left_right">
+
+            <Button
+                android:id="@+id/tv_scratch_detail_buy_one"
+                android:layout_width="367px"
+                android:layout_height="50px"
+                android:layout_below="@id/tv_scratch_detail_info_sale_num"
+                android:layout_marginLeft="12px"
+                android:layout_marginTop="24px"
+                android:background="@drawable/sl_scatch_buy_way"
+                android:gravity="center"
+                android:text="买单张"
+                android:textColor="@color/sl_scratch_buy_way_t_color"
+                android:textSize="26px" />
+
+            <Button
+                android:id="@+id/tv_scratch_detail_buy_all"
+                android:layout_width="367px"
+                android:layout_height="50px"
+                android:layout_marginLeft="12px"
+                android:layout_marginTop="24px"
+                android:layout_toRightOf="@id/tv_scratch_detail_buy_one"
+                android:background="@drawable/sl_scatch_buy_way"
+                android:gravity="center"
+                android:text="买整包"
+                android:textColor="@color/sl_scratch_buy_way_t_color"
+                android:textSize="26px" />
+
+            <ImageView
+                android:id="@+id/iv_line_scatch_split"
+                android:layout_width="1310px"
+                android:layout_height="10px"
+                android:layout_below="@id/tv_scratch_detail_buy_one"
+                android:layout_marginLeft="21px"
+                android:src="@drawable/line_scatch_split" />
+
+            <View
+                android:layout_width="1290px"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_scratch_detail_bottom"
+                android:layout_below="@id/tv_scratch_detail_buy_all"
+                android:layout_marginBottom="18px"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="5px"
+                android:background="@color/white" />
+
+            <com.zhongti.huacailauncher.widget.auto.AutoSmartRefreshLayout
+                android:id="@+id/refresh_scratch_tickets"
+                android:layout_width="1310px"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_scratch_detail_bottom"
+                android:layout_below="@id/tv_scratch_detail_buy_all"
+                android:layout_marginBottom="98px"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="5px"
+                app:srlEnablePureScrollMode="true">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_scratch_tickets"
+                    android:layout_width="1310px"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:overScrollMode="never"
+                    android:scrollbarSize="@dimen/x10"
+                    android:scrollbars="vertical" />
+
+            </com.zhongti.huacailauncher.widget.auto.AutoSmartRefreshLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="498px"
+            android:layout_height="956px"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="72px"
+            android:layout_toRightOf="@id/rl__scratch_detail_root_left"
+            android:background="@drawable/bg_scratch_detail_left_right">
+
+            <TextView
+                android:id="@+id/tv_scratch_detail_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36px"
+                android:textColor="@color/black2"
+                android:textSize="28px"
+                tools:text="天降财神" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_scratch_detail_rule_positive"
+                android:layout_width="160px"
+                android:layout_height="160px"
+                android:layout_below="@id/tv_scratch_detail_info_name"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="24px"
+                app:riv_corner_radius="@dimen/x10"
+                tools:src="@color/black" />
+
+            <!--20 24-->
+            <TextView
+                android:id="@+id/tv_scratch_detail_info_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_scratch_detail_info_name"
+                android:layout_marginLeft="24px"
+                android:layout_marginTop="29px"
+                android:layout_toRightOf="@id/iv_scratch_detail_rule_positive"
+                android:textColor="@color/black2"
+                android:textSize="20px"
+                tools:text="面值 ¥30" />
+
+            <!--20 24-->
+            <TextView
+                android:id="@+id/tv_scratch_detail_info_award"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_scratch_detail_info_price"
+                android:layout_below="@id/tv_scratch_detail_info_price"
+                android:layout_marginTop="21px"
+                android:textSize="20px"
+                tools:text="最高奖金: 1,000,000元" />
+
+            <TextView
+                android:id="@+id/tv_scratch_detail_num_per_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_scratch_detail_info_award"
+                android:layout_below="@id/tv_scratch_detail_info_award"
+                android:layout_marginTop="31px"
+                android:textColor="@color/black2"
+                android:textSize="20px"
+                tools:text="20张/包" />
+
+            <TextView
+                android:id="@+id/tv_scratch_detail_info_sale_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_scratch_detail_info_award"
+                android:layout_marginLeft="24px"
+                android:layout_marginTop="31px"
+                android:layout_toRightOf="@id/tv_scratch_detail_num_per_package"
+                android:textColor="@color/black2"
+                android:textSize="20px"
+                tools:text="销量 1000张" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamButton
+                android:id="@+id/btn_scratch_detail_djway"
+                android:layout_width="160px"
+                android:layout_height="44px"
+                android:layout_below="@id/iv_scratch_detail_rule_positive"
+                android:layout_marginLeft="48px"
+                android:layout_marginTop="15px"
+                android:background="@drawable/bg_scratch_detail_rule_btn"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="兑奖方式"
+                android:textColor="@color/white"
+                android:textSize="20px" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamButton
+                android:id="@+id/btn_scratch_detail_cpty"
+                android:layout_width="160px"
+                android:layout_height="44px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/iv_scratch_detail_rule_positive"
+                android:layout_marginRight="36px"
+                android:layout_marginTop="15px"
+                android:background="@drawable/bg_scratch_detail_rule_btn"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="彩票样图"
+                android:textColor="@color/white"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/tv_scratch_detail_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_scratch_detail_djway"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40px"
+                android:text="本平台彩票均由体彩中心发行，请放心购买！"
+                android:textColor="@color/black2"
+                android:textSize="20px" />
+
+            <View
+                android:id="@+id/divider_scratch_detail_right"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@id/tv_scratch_detail_warning"
+                android:layout_marginLeft="6px"
+                android:layout_marginRight="6px"
+                android:layout_marginTop="18px"
+                android:background="@color/main_yellow" />
+
+            <com.zhongti.huacailauncher.widget.recycler.AutoPollRecyclerView
+                android:id="@+id/rv_scratch_detail_msgs"
+                android:layout_width="462px"
+                android:layout_height="188px"
+                android:layout_below="@id/divider_scratch_detail_right"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="47px"
+                android:background="@drawable/bg_scratch_detail_white_yuan"
+                android:overScrollMode="never"
+                android:paddingBottom="36px"
+                android:paddingTop="36px" />
+
+            <ImageView
+                android:layout_width="44px"
+                android:layout_height="43px"
+                android:layout_below="@id/divider_scratch_detail_right"
+                android:layout_marginLeft="38px"
+                android:layout_marginTop="26px"
+                android:src="@drawable/img_scratch_detail_guangbo" />
+
+            <TextView
+                android:id="@+id/tv_scratch_detail_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_scratch_detail_msgs"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="46px"
+                android:textColor="@color/black3"
+                android:textSize="24px"
+                android:visibility="invisible"
+                tools:text="已选 6 张 财神驾到 需支付 ¥180.00" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamButton
+                android:id="@+id/btn_scratch_detail_pay"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_below="@id/tv_scratch_detail_selected"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="26px"
+                android:background="@drawable/bg_btn_scratch_detail_pay_n"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="支付"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_scratch_detail_count_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_scratch_detail_pay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25px"
+                android:text="请在02:99:99内完成付款"
+                android:textSize="20px"
+                android:visibility="invisible" />
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamImageView
+            android:id="@+id/iv_scratch_detail_fun_expand"
+            android:layout_width="188px"
+            android:layout_height="249px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="63px"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/img_lottery_fun_play_chu"
+            android:visibility="invisible" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_scratch_detail_fun_play_shrink"
+            android:layout_width="1547px"
+            android:layout_height="260px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="66px"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_scratch_detail_fun_play"
+                android:layout_width="1385px"
+                android:layout_height="209px"
+                android:layout_marginTop="35px"
+                android:background="@drawable/bg_lottery_fun_play_list"
+                android:overScrollMode="never"
+                android:paddingRight="81px" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamImageView
+                android:id="@+id/iv_scratch_detail_fun_shrink"
+                android:layout_width="234px"
+                android:layout_height="260px"
+                android:layout_marginLeft="1274px"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/img_lottery_fun_play_shou" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout
+        android:id="@+id/fl_scratch_detail_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="10px"
+        android:padding="10px">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:src="@drawable/img_page_close1" />
+
+    </com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

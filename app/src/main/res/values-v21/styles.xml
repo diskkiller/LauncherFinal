@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="app_theme_turn" parent="android:Theme.Material.NoActionBar">
+        <!-- 开启过渡效果 -->
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- 指定界面进入/退出动画效果 -->
+        <item name="android:windowEnterTransition">@transition/slide</item>
+        <item name="android:windowExitTransition">@transition/fade</item>
+
+        <!--<item name="android:windowBackground">@color/dialog_back_frame</item>-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:colorBackgroundCacheHint">@null</item>-->
+    </style>
+</resources>

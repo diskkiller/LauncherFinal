@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="dialog_activity_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/dialog_back_frame</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="theme_main_activity" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/bg_main_lottery</item>
+    </style>
+
+    <style name="dialog_activity_theme_trans" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <!--刷新控件属性-->
+    <style name="refresh_style">
+        <item name="srlAccentColor">@color/white</item>
+        <item name="srlPrimaryColor">@color/main_yellow</item>
+        <item name="srlEnableLoadMore">true</item>
+        <item name="srlEnableScrollContentWhenLoaded">false</item>
+        <item name="srlEnableScrollContentWhenRefreshed">false</item>
+        <item name="srlEnableLoadMoreWhenContentNotFull">false</item>
+        <item name="srlEnableAutoLoadMore">false</item>
+    </style>
+</resources>

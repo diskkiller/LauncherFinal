@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_main_game_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="151px"
+        android:descendantFocusability="blocksDescendants">
+
+        <ImageView
+            android:id="@+id/iv_home_game"
+            android:layout_width="56px"
+            android:layout_height="56px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="36px"
+            android:src="@drawable/img_home_game" />
+
+        <TextView
+            android:id="@+id/tv_main_game_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23px"
+            android:layout_marginTop="42px"
+            android:layout_toRightOf="@id/iv_home_game"
+            android:text="娱乐休闲"
+            android:textColor="@color/scratch_detail_rule_btn_bg"
+            android:textSize="32px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="47px"
+            android:layout_toRightOf="@id/tv_main_game_text"
+            android:text="大家都喜欢"
+            android:textColor="@color/black3"
+            android:textSize="28px" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_main_games"
+            android:layout_width="match_parent"
+            android:layout_height="630px"
+            android:layout_below="@id/iv_home_game"
+            android:layout_marginLeft="85px"
+            android:layout_marginRight="85px"
+            android:layout_marginTop="80px"
+            android:clipToPadding="false"
+            android:overScrollMode="never" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

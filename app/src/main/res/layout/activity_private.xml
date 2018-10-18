@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="1820px"
+        android:layout_height="990px"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_private_big"
+        android:paddingBottom="20px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="30px">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_private_left"
+            android:layout_width="496px"
+            android:layout_height="1010px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_private_left_right">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_private_tx"
+                android:layout_width="160px"
+                android:layout_height="160px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="74px"
+                android:src="@drawable/img_default_tx"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/tv_private_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_private_tx"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24px"
+                android:ellipsize="end"
+                android:maxLength="24"
+                android:singleLine="true"
+                android:text="最多最多最多就十二个字呀"
+                android:textColor="@color/main_yellow"
+                android:textSize="28px" />
+
+            <ImageView
+                android:id="@+id/iv_private_phone"
+                android:layout_width="42px"
+                android:layout_height="42px"
+                android:layout_below="@id/tv_private_nickname"
+                android:layout_marginLeft="136px"
+                android:layout_marginTop="13px"
+                android:src="@drawable/img_private_phone" />
+
+            <TextView
+                android:id="@+id/tv_private_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_private_nickname"
+                android:layout_marginLeft="14px"
+                android:layout_marginTop="14px"
+                android:layout_toRightOf="@id/iv_private_phone"
+                android:text="1888****888"
+                android:textColor="@color/black3"
+                android:textSize="26px" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamTextView
+                android:id="@+id/tv_private_charge"
+                android:layout_width="180px"
+                android:layout_height="40px"
+                android:layout_below="@id/iv_private_phone"
+                android:layout_marginLeft="55px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/sl_private_left_btn_press"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="充值金豆"
+                android:textColor="@color/sl_private_left_btn_text_pressed"
+                android:textSize="26px"
+                android:visibility="visible" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamTextView
+                android:id="@+id/tv_private_got_lotti"
+                android:layout_width="180px"
+                android:layout_height="40px"
+                android:layout_below="@id/iv_private_phone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="26px"
+                android:layout_marginTop="20px"
+                android:layout_toRightOf="@id/tv_private_charge"
+                android:background="@drawable/sl_private_left_btn_press"
+                android:gravity="center"
+                android:text="索要彩票"
+                android:textColor="@color/sl_private_left_btn_text_pressed"
+                android:textSize="26px" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_private_left_item_lotti"
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_below="@id/tv_private_charge"
+                android:layout_marginTop="31px"
+                android:background="@drawable/sl_private_left_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_private_left_item_lotti"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginLeft="50px"
+                    android:src="@drawable/sl_private_left_lotti" />
+
+                <TextView
+                    android:id="@+id/tv_private_left_item_lotti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16px"
+                    android:text="彩票订单"
+                    android:textColor="@color/sl_private_left_item_text"
+                    android:textSize="26px" />
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="1px"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_private_left_item_lottiA"
+                    android:layout_width="16px"
+                    android:layout_height="27px"
+                    android:layout_marginRight="26px"
+                    android:src="@drawable/sl_private_left_arrow" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_private_left_item_gold"
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_below="@id/ll_private_left_item_lotti"
+                android:background="@drawable/sl_private_left_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_private_left_item_gold"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginLeft="50px"
+                    android:src="@drawable/sl_private_left_gold" />
+
+                <TextView
+                    android:id="@+id/tv_private_left_item_goldT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16px"
+                    android:text="金豆记录"
+                    android:textColor="@color/sl_private_left_item_text"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_private_left_item_goldN"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_marginRight="16px"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/sl_private_left_item_text"
+                    android:textSize="26px"
+                    tools:text="100000000000000" />
+
+                <ImageView
+                    android:id="@+id/iv_private_left_item_goldA"
+                    android:layout_width="16px"
+                    android:layout_height="27px"
+                    android:layout_marginRight="26px"
+                    android:src="@drawable/sl_private_left_arrow" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_private_left_item_market"
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_below="@id/ll_private_left_item_gold"
+                android:background="@drawable/sl_private_left_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_private_left_item_market"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginLeft="50px"
+                    android:src="@drawable/sl_private_left_market" />
+
+                <TextView
+                    android:id="@+id/tv_private_left_item_market"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16px"
+                    android:text="商城订单"
+                    android:textColor="@color/sl_private_left_item_text"
+                    android:textSize="26px" />
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="1px"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_private_left_item_marketA"
+                    android:layout_width="16px"
+                    android:layout_height="27px"
+                    android:layout_marginRight="26px"
+                    android:src="@drawable/sl_private_left_arrow" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamButton
+                android:id="@+id/btn_private_sp"
+                android:layout_width="210px"
+                android:layout_height="50px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20px"
+                android:layout_marginLeft="26px"
+                android:background="@drawable/bg_private_lb_btn"
+                android:clickable="true"
+                android:text="服务协议"
+                android:textColor="@color/white"
+                android:textSize="24px" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamButton
+                android:id="@+id/btn_private_au"
+                android:layout_width="210px"
+                android:layout_height="50px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20px"
+                android:layout_marginLeft="25px"
+                android:layout_toRightOf="@id/btn_private_sp"
+                android:background="@drawable/bg_private_lb_btn"
+                android:clickable="true"
+                android:text="关于我们"
+                android:textColor="@color/white"
+                android:textSize="24px" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:id="@+id/private_right_container"
+            android:layout_width="1244px"
+            android:layout_height="1010px"
+            android:layout_marginLeft="14px"
+            android:layout_toRightOf="@id/rl_private_left"
+            android:background="@drawable/bg_private_left_right" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

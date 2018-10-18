@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_scatch_detail1" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_had_pay_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_had_pay_left"
+            android:layout_width="500px"
+            android:layout_height="930px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="101px"
+            android:background="@drawable/bg_had_pay_left" />
+
+        <ImageView
+            android:id="@+id/iv_had_pay_thumb"
+            android:layout_width="245px"
+            android:layout_height="405px"
+            android:layout_marginLeft="148px"
+            android:layout_marginTop="70px"
+            android:scaleType="matrix"
+            android:transitionName="big_img"
+            tools:ignore="UnusedAttribute"
+            tools:src="@android:color/darker_gray" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_had_pay_lotti_info"
+            android:layout_width="487px"
+            android:layout_height="169px"
+            android:layout_below="@id/iv_had_pay_thumb"
+            android:layout_marginLeft="30px"
+            android:background="@drawable/bg_scratch_detail_info">
+
+            <ImageView
+                android:id="@+id/iv_had_pay_limg"
+                android:layout_width="59px"
+                android:layout_height="95px"
+                android:layout_marginLeft="31px"
+                android:layout_marginTop="28px"
+                android:src="@drawable/img_scratch_qb" />
+
+            <TextView
+                android:id="@+id/tv_had_pay_lotti_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="32px"
+                android:layout_toRightOf="@id/iv_had_pay_limg"
+                android:textColor="@color/scratch_detail_rule_info_text"
+                android:textSize="34px"
+                tools:text="财神驾到" />
+
+            <TextView
+                android:id="@+id/tv_had_pay_lotti_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_had_pay_lotti_name"
+                android:layout_marginBottom="4px"
+                android:layout_marginLeft="44px"
+                android:layout_toRightOf="@id/tv_had_pay_lotti_name"
+                android:textColor="@color/scratch_detail_rule_info_text"
+                android:textSize="24px"
+                tools:text="面值 ¥ 30" />
+
+            <TextView
+                android:id="@+id/tv_had_pay_lotti_award"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_had_pay_lotti_name"
+                android:layout_below="@id/tv_had_pay_lotti_name"
+                android:textColor="@color/scratch_detail_rule_info_text"
+                android:textSize="28px"
+                tools:text="最高奖金 ¥ 1,000,000" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_had_pay_orderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_had_pay_lotti_info"
+            android:layout_marginLeft="70px"
+            android:layout_marginTop="55px"
+            android:textColor="@color/black3"
+            android:textSize="24px"
+            tools:text="订单号: 350292385820800300" />
+
+        <TextView
+            android:id="@+id/tv_had_pay_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_had_pay_orderNo"
+            android:layout_marginLeft="70px"
+            android:layout_marginTop="15px"
+            android:textColor="@color/black3"
+            android:textSize="24px"
+            tools:text="刮奖进度 19/20" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="1360px"
+            android:layout_height="930px"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="25px"
+            android:layout_marginTop="101px"
+            android:layout_toRightOf="@id/view_had_pay_left"
+            android:background="@drawable/scratch_had_pay_bg"
+            android:descendantFocusability="blocksDescendants">
+
+            <ImageView
+                android:layout_width="1320px"
+                android:layout_height="56px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="30px"
+                android:src="@drawable/bg_had_pay_list_top_line" />
+
+            <View
+                android:layout_width="1260px"
+                android:layout_height="830px"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="48px"
+                android:background="@drawable/bg_had_pay_white" />
+
+            <com.zhongti.huacailauncher.widget.auto.AutoSmartRefreshLayout
+                android:id="@+id/refresh_had_pay_list"
+                android:layout_width="1320px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="36px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="48px"
+                app:srlEnablePureScrollMode="true">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_had_pay_list"
+                    android:layout_width="1320px"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbarSize="@dimen/x10"
+                    android:scrollbars="vertical" />
+
+            </com.zhongti.huacailauncher.widget.auto.AutoSmartRefreshLayout>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="930dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="25dp"-->
+        <!--android:layout_marginTop="101dp"-->
+        <!--android:layout_toRightOf="@id/view_had_pay_left"-->
+        <!--android:background="@drawable/scratch_had_pay_bg" />-->
+
+
+        <!--<ImageView-->
+        <!--android:layout_width="1320dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_marginLeft="35dp"-->
+        <!--android:layout_marginTop="131dp"-->
+        <!--android:layout_toRightOf="@id/view_had_pay_left"-->
+        <!--android:src="@drawable/bg_had_pay_list_top_line" />-->
+
+        <!--<View-->
+        <!--android:layout_width="1260dp"-->
+        <!--android:layout_height="830dp"-->
+        <!--android:layout_marginLeft="65dp"-->
+        <!--android:layout_marginTop="159dp"-->
+        <!--android:layout_toRightOf="@id/view_had_pay_left"-->
+        <!--android:background="@drawable/bg_had_pay_white" />-->
+
+        <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+        <!--android:id="@+id/refresh_had_pay_list"-->
+        <!--style="@style/refresh_style"-->
+        <!--android:layout_width="1320dp"-->
+        <!--android:layout_height="800dp"-->
+        <!--android:layout_marginLeft="35dp"-->
+        <!--android:layout_marginTop="159dp"-->
+        <!--android:layout_toRightOf="@id/view_had_pay_left"-->
+        <!--app:srlEnablePureScrollMode="true">-->
+
+        <!--<com.scwang.smartrefresh.header.WaterDropHeader-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/rv_had_pay_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:overScrollMode="never"-->
+        <!--android:scrollbarSize="10dp"-->
+        <!--android:scrollbars="vertical" />-->
+
+        <!--<com.scwang.smartrefresh.layout.footer.ClassicsFooter-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+        <!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+
+        <!--<View-->
+        <!--android:layout_width="1384dp"-->
+        <!--android:layout_height="104dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="40dp"-->
+        <!--android:layout_marginLeft="2dp"-->
+        <!--android:layout_toRightOf="@id/view_had_pay_left"-->
+        <!--android:background="@drawable/bg_had_pay_right_bottom" />-->
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout
+        android:id="@+id/fl_had_pay_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="16px"
+        android:layout_marginTop="13px"
+        android:padding="20px">
+
+        <ImageView
+            android:layout_width="48px"
+            android:layout_height="48px"
+            android:src="@drawable/img_page_close" />
+
+    </com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>
+</com.zhy.autolayout.AutoFrameLayout>

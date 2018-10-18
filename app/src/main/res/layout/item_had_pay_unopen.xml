@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:open_super="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="176px"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_had_pay_not_open_ticket" />
+
+    <TextView
+        android:id="@+id/tv_had_pay_unopen_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="16px"
+        android:layout_marginRight="16px"
+        android:layout_marginTop="42px"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/had_pay_red"
+        android:textSize="32px"
+        tools:text="457284375293458234758243752834573485728345728345273458234" />
+
+</com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>

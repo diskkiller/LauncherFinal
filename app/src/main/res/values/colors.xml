@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_frame_80">#ccffffff</color>
+    <color name="black">#000000</color>
+    <color name="dialog_back_frame">#88000000</color>
+    <color name="black_light_progress">#88000000</color>
+    <color name="banner_frame">#2e000000</color>
+
+    <!--主色调-->
+    <color name="black1">#333333</color>
+    <color name="black2">#666666</color>
+    <color name="black3">#999999</color>
+    <color name="black4">#EEEEEE</color>
+    <color name="black5">#CCCCCC</color>
+    <color name="black_frame1">#1f000000</color>
+
+    <!--设备绑定-->
+    <color name="cursor_device_bind">#FEAE0F</color>
+
+    <!--首页-->
+    <color name="main_yellow">#FF9903</color>
+    <color name="main_transparent">#e3ffffff</color>
+    <color name="main_big_bg">#F2F2F2</color>
+    <color name="main_game_bg">#F6F3E3</color>
+    <color name="main_game_stroke">#D3A55A</color>
+    <color name="main_popularize_edit_bg">#D8D8D8</color>
+    <color name="bg_home_bottom_start">#80aaaaaa</color>
+    <color name="bg_home_bottom_end">#AAAAAA</color>
+    <color name="bg_toolbar">#4c2c0151</color>
+    <color name="bg_toolbar1">#332c0151</color>
+    <color name="bg_banner">#66000000</color>
+    <color name="main_red">#E71F1D</color>
+
+    <!--即开彩详情-->
+    <color name="scratch_detail_rule_btn_bg">#E86036</color>
+    <color name="scratch_detail_rule_bg">#ccffffff</color>
+    <color name="scratch_detail_rule_stroke">#979797</color>
+    <color name="scratch_detail_rule_info_text">#F8E71C</color>
+    <color name="scratch_detail_rule_info_tip">#E86036</color>
+    <color name="scratch_detail_ticket_chosen">#F78E3A</color>
+    <color name="scratch_detail_ticket_card_shadow">#F2B063</color>
+    <color name="scratch_detail_ticket_bottom">#F95B2A</color>
+    <color name="scratch_detail_ticket_bottom_r">#F95B2A</color>
+    <color name="scratch_detail_ticket_checked">#47E201</color>
+    <color name="scratch_detail_bg">#F6E5CE</color>
+
+    <!--即开彩兑奖-->
+    <color name="scratch_dj_red">#FF0606</color>
+
+    <!--即开彩购买之后页-->
+    <color name="had_pay_red">#F9696E</color>
+
+
+    <!--个人中心-->
+    <color name="bg_private_big">#F6F6F6</color>
+    <color name="private_lotti_item1_graybg">#F3F3F3</color>
+    <color name="private_lotti_item1_red">#FF0202</color>
+    <color name="private_about_us">#3ba5d7</color>
+    <color name="private_gold_wast">#EA6F5A</color>
+
+    <!--直播-->
+    <color name="live_bg1">#19ff9903</color>
+    <color name="live_yellow">#F78E3A</color>
+    <color name="live_red">#FF5D3D</color>
+    <color name="live_red2">#FF0202</color>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="900px"
+        android:layout_height="540px"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_window_outer">
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout
+            android:id="@+id/fl_force_exit_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6px"
+            android:layout_marginTop="6px"
+            android:clickable="true"
+            android:padding="20px"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:src="@drawable/img_chacha" />
+
+        </com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_force_exit_text_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="210px"
+            android:text="为了您的账户安全,已自动退出登录"
+            android:textColor="@color/main_yellow"
+            android:textSize="34px" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_force_exit_text_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="弹窗将在 "
+                android:textColor="@color/main_yellow"
+                android:textSize="34px" />
+
+            <TextView
+                android:id="@+id/tv_force_exit_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/private_lotti_item1_red"
+                android:textSize="36px"
+                tools:text="10s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 后关闭"
+                android:textColor="@color/main_yellow"
+                android:textSize="34px" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamButton
+            android:id="@+id/btn_force_exit_got"
+            android:layout_width="200px"
+            android:layout_height="60px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="36px"
+            android:layout_marginLeft="231px"
+            android:background="@drawable/bg_widow_btn_gray"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="我知道了"
+            android:textColor="@color/white"
+            android:textSize="24px" />
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamButton
+            android:id="@+id/btn_force_exit_reLogin"
+            android:layout_width="200px"
+            android:layout_height="60px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="36px"
+            android:layout_marginLeft="37px"
+            android:layout_toRightOf="@id/btn_force_exit_got"
+            android:background="@drawable/bg_widow_btn_yellow"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="重新登录"
+            android:textColor="@color/white"
+            android:textSize="24px" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

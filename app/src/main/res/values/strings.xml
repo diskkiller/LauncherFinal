@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">华彩宝</string>
+
+    <!--设备激活-->
+    <string name="device_bind_step1">微信关注下方“华\n彩宝”公众号</string>
+    <string name="device_bind_step2">申请成为商家</string>
+    <string name="device_bind_step3">激活设备</string>
+
+
+    <string name="scratch_dj_bottom_rule">兑奖说明： \n1. 请您使用微信或支付宝“扫一扫”扫描屏幕上的二维码进行兑奖;\n2. 请认真核对屏幕上显示的票号与手机兑奖页面显示的是否一致;\n3. 每张兑奖二维码仅可兑奖一次，不可多次兑奖;</string>
+
+    <string name="about_us">\t\t中体华彩（北京）信息技术有限公司，位于北京望京soho高科技产业园区，注册资金2000万，是中瀚天成投资管理有限公司旗下的控股子公司，负责即开型彩票合作、硬件销售、彩票与游戏的运营、市场运营、客服售后，其他业务拓展等。提供专业的服务平台，安全、优质、高效的为中国彩民打造量身定制的个性化移动终端。   \n\t\t公司获得各省、市体彩中心社会化营销授权，目前得到即开彩销售业务授权落地地区有：北京、天津、海南、山东、浙江、黑龙江、河北、重庆等11个省份与两个直辖市，授权城市还在继续落地中……\n\t\t中体华彩凭借着深厚的企业底蕴，丰富的彩票行业经验，强大的技术实力，为广大用户提供“最新颖的购买方式、最专业的购买技巧、最丰富的娱乐资源”，为中国的公益事业和彩票事业的发展，提供优秀的智能服务平台。</string>
+
+    <string name="net_unavailable">网络不可用,请检查您的网络设置</string>
+
+    <string name="data_null_and_retry">加载数据失败,请稍后重试!</string>
+    <string name="check_ticket_live_warning">温馨提示：\n1. 根据《彩票管理条例》且保证彩票的公开公正，本平台采用视频直播的方式进行验票，每张彩票仅可申请一次视频验票。\n2. 若申请验票后，如错过验票直播,您可在验票完成后,在"我的-彩票订单-查看"点击票号进入，查看验票结果。</string>
+    <string name="cancel_ticket_team">取消后，您现在的排队进度将取消，下次进入将重\n新排队！确认取消吗？</string>
+    <string name="jb_tips">举报原因：\n其他（请在下方输入举报内容）</string>
+</resources>

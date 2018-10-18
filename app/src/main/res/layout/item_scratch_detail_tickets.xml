@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhongti.huacailauncher.widget.auto.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/x8">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/white"
+        android:paddingLeft="33px">
+
+        <ImageView
+            android:id="@+id/iv_scratch_detail_check"
+            android:layout_width="47px"
+            android:layout_height="41px"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13px"
+            android:src="@drawable/img_scratch_detail_ticket_choose" />
+
+        <TextView
+            android:id="@+id/tv_scratch_detail_ticketNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/iv_scratch_detail_check"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/scratch_detail_ticket_chosen"
+            android:textSize="24px"
+            tools:text="324235435132423423412342314" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhongti.huacailauncher.widget.auto.AutoCardView>

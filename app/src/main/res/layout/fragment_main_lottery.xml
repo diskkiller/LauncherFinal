@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhongti.huacailauncher.widget.auto.AutoSmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlEnablePureScrollMode="true">
+
+    <com.zhongti.huacailauncher.widget.auto.AutoNestedScrollView
+        android:id="@+id/scroll_main_lottery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:paddingTop="151px">
+
+            <include layout="@layout/header_main_lottery" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_main_lottery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:paddingLeft="60px" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhongti.huacailauncher.widget.auto.AutoNestedScrollView>
+
+</com.zhongti.huacailauncher.widget.auto.AutoSmartRefreshLayout>

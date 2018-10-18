@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="266px"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="30px">
+
+        <TextView
+            android:id="@+id/tv_item_private_buy_orId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/black3"
+            android:textSize="24px"
+            tools:text="订单编号:35029238582080038888" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="7px"
+            android:background="@drawable/bg_private_lotti1_itemgraybg">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_item_private_lotti_buy"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                app:riv_corner_radius="@dimen/x10"
+                tools:src="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tv_item_private_lotti_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60px"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="39px"
+                android:layout_toLeftOf="@+id/tv_item_private_lotti_progress"
+                android:layout_toRightOf="@id/iv_item_private_lotti_buy"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black3"
+                android:textSize="24px"
+                tools:text="绿翡翠" />
+
+            <TextView
+                android:id="@+id/tv_item_private_lotti_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_private_lotti_name"
+                android:layout_marginLeft="60px"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="10px"
+                android:layout_toLeftOf="@+id/tv_item_private_lotti_progress"
+                android:layout_toRightOf="@id/iv_item_private_lotti_buy"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black3"
+                android:textSize="24px"
+                tools:text="面值：￥30.00/" />
+
+            <TextView
+                android:id="@+id/tv_item_private_lotti_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_private_lotti_price"
+                android:layout_marginLeft="60px"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="22px"
+                android:layout_toLeftOf="@+id/tv_item_private_lotti_progress"
+                android:layout_toRightOf="@id/iv_item_private_lotti_buy"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black3"
+                android:textSize="24px"
+                tools:text="2018-06-06 24:23:00" />
+
+            <TextView
+                android:id="@+id/tv_item_private_lotti_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="407px"
+                android:textColor="@color/private_lotti_item1_red"
+                android:textSize="28px"
+                tools:text="进度：10/60" />
+
+            <TextView
+                android:id="@+id/tv_item_private_lotti_spend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="32px"
+                android:layout_marginTop="38px"
+                android:textColor="@color/private_lotti_item1_red"
+                android:textSize="34px"
+                tools:text="￥1800.00" />
+
+            <TextView
+                android:id="@+id/tv_item_private_lotti_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/tv_item_private_lotti_spend"
+                android:layout_below="@id/tv_item_private_lotti_spend"
+                android:layout_marginRight="2px"
+                android:layout_marginTop="10px"
+                android:textColor="@color/black3"
+                android:textSize="20px"
+                tools:text="x 60" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamButton
+                android:id="@+id/btn_item_private_buy_del"
+                android:layout_width="100px"
+                android:layout_height="40px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20px"
+                android:layout_marginRight="26px"
+                android:background="@drawable/bg_private_lotti_buy_del"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="26px" />
+
+            <com.zhongti.huacailauncher.widget.bamUI.BamButton
+                android:id="@+id/btn_item_private_buy_pw"
+                android:layout_width="100px"
+                android:layout_height="40px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20px"
+                android:layout_marginRight="36px"
+                android:layout_toLeftOf="@+id/btn_item_private_buy_del"
+                android:background="@drawable/bg_private_lotti_buy_pw"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="查看"
+                android:textColor="@color/white"
+                android:textSize="26px" />
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoFrameLayout>

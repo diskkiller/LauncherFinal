@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surface_record_live"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/black_frame1">
+
+        <ImageView
+            android:layout_width="80px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:src="@drawable/img_zb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="华彩宝录票直播平台"
+            android:textColor="@color/white"
+            android:textSize="30px"
+            android:textStyle="bold" />
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout
+            android:id="@+id/fl_record_live_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="20px">
+
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@drawable/img_live_close" />
+        </com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

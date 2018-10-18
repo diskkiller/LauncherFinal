@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <View
+        android:layout_width="600px"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:transitionName="big_img" />
+
+    <com.zhongti.huacailauncher.widget.HackyViewPager
+        android:id="@+id/vp_big_img_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout
+        android:id="@+id/fl_lotti_bigImg_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="20px"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="20px">
+
+        <ImageView
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:src="@drawable/img_big_lotti_cha" />
+
+    </com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

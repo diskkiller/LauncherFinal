@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="900px"
+        android:layout_height="540px"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_window_outer_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="69px"
+            android:layout_marginTop="50px"
+            android:text="邮寄说明"
+            android:textColor="@color/black3"
+            android:textSize="28px"
+            android:textStyle="bold" />
+
+        <com.zhongti.huacailauncher.widget.auto.AutoNestedScrollView
+            android:id="@+id/scroll_demand_ticket_intro"
+            android:layout_width="764px"
+            android:layout_height="200px"
+            android:layout_marginLeft="69px"
+            android:layout_marginTop="113px"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_demand_ticket_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black3"
+                    android:textSize="24px" />
+
+            </LinearLayout>
+
+        </com.zhongti.huacailauncher.widget.auto.AutoNestedScrollView>
+
+        <ImageView
+            android:id="@+id/iv_demand_ticket_erCode"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_below="@id/scroll_demand_ticket_intro"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY" />
+
+
+        <!--<FrameLayout-->
+        <!--android:id="@+id/fl_check_ticket_sure_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="360dp"-->
+        <!--android:layout_marginTop="70dp">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_check_ticket_sure_tips"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:textColor="@color/main_yellow"-->
+        <!--android:textSize="26sp"-->
+        <!--tools:text="好可惜啊，被别人抢先一步，还有更多彩票快去看看吧!" />-->
+
+        <!--</FrameLayout>-->
+
+        <!--<Button-->
+        <!--android:id="@+id/btn_check_ticket_sure_cancel"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="36dp"-->
+        <!--android:layout_marginLeft="231dp"-->
+        <!--android:background="@drawable/bg_widow_btn_gray"-->
+        <!--android:text="取消"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="24sp" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/btn_check_ticket_sure_go"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="36dp"-->
+        <!--android:layout_marginLeft="37dp"-->
+        <!--android:layout_toRightOf="@id/btn_check_ticket_sure_cancel"-->
+        <!--android:background="@drawable/bg_widow_btn_gray"-->
+        <!--android:text="去看看"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="24sp"-->
+        <!--android:transitionName="big_img"-->
+        <!--tools:ignore="UnusedAttribute" />-->
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout
+            android:id="@+id/fl_check_ticket_sure_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6px"
+            android:layout_marginTop="6px"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="20px">
+
+            <ImageView
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:src="@drawable/img_chacha" />
+
+        </com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

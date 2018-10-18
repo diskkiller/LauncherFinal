@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhongti.huacailauncher.widget.bamUI.BamCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:cardCornerRadius="@dimen/x20"
+    app:cardElevation="@dimen/x8"
+    app:open_super="true">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="400px"
+        android:layout_height="630px">
+
+        <ImageView
+            android:id="@+id/iv_main_item_game_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhongti.huacailauncher.widget.bamUI.BamCardView>

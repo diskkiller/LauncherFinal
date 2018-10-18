@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@drawable/bg_main_lottery">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_main_banner_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_banner"
+        android:paddingBottom="26px">
+
+        <com.zhongti.huacailauncher.widget.banner.MZBannerView
+            android:id="@+id/banner_main_lottery"
+            android:layout_width="900px"
+            android:layout_height="450px"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="16px"
+            app:canLoop="true"
+            app:middle_page_cover="false"
+            app:open_mz_mode="false"
+            tools:background="@color/black" />
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamCardView
+            android:id="@+id/card_main_banner_gy"
+            android:layout_width="573px"
+            android:layout_height="216px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="16px"
+            android:layout_toRightOf="@id/banner_main_lottery"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/x10"
+            app:cardElevation="@dimen/x8"
+            app:open_super="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_main_banner_gy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_place_register_gy"
+                app:riv_corner_radius="@dimen/x10" />
+        </com.zhongti.huacailauncher.widget.bamUI.BamCardView>
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamCardView
+            android:id="@+id/card_main_banner_register"
+            android:layout_width="573px"
+            android:layout_height="216px"
+            android:layout_below="@id/card_main_banner_gy"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="16px"
+            android:layout_toRightOf="@id/banner_main_lottery"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/x10"
+            app:cardElevation="@dimen/x8"
+            app:open_super="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_main_banner_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_place_register_gy"
+                app:riv_corner_radius="@dimen/x10" />
+        </com.zhongti.huacailauncher.widget.bamUI.BamCardView>
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamCardView
+            android:id="@+id/card_main_banner_zjwz"
+            android:layout_width="267px"
+            android:layout_height="140px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="16px"
+            android:layout_toRightOf="@id/card_main_banner_gy"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/x10"
+            app:cardElevation="@dimen/x8"
+            app:open_super="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_main_banner_zjwz"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_place_gold_record"
+                app:riv_corner_radius="@dimen/x10" />
+        </com.zhongti.huacailauncher.widget.bamUI.BamCardView>
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamCardView
+            android:id="@+id/card_main_banner_record"
+            android:layout_width="267px"
+            android:layout_height="140px"
+            android:layout_below="@id/card_main_banner_zjwz"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="15px"
+            android:layout_toRightOf="@id/card_main_banner_gy"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/x10"
+            app:cardElevation="@dimen/x8"
+            app:open_super="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_main_banner_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_place_gold_record"
+                app:riv_corner_radius="@dimen/x10" />
+        </com.zhongti.huacailauncher.widget.bamUI.BamCardView>
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamCardView
+            android:id="@+id/card_main_banner_market"
+            android:layout_width="267px"
+            android:layout_height="140px"
+            android:layout_below="@id/card_main_banner_record"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="15px"
+            android:layout_toRightOf="@id/card_main_banner_gy"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/x10"
+            app:cardElevation="@dimen/x8"
+            app:open_super="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_main_banner_market"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_place_gold_record"
+                app:riv_corner_radius="@dimen/x10" />
+        </com.zhongti.huacailauncher.widget.bamUI.BamCardView>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95px"
+        android:layout_below="@id/rl_main_banner_area">
+
+        <ImageView
+            android:id="@+id/iv_main_header_lottery"
+            android:layout_width="276px"
+            android:layout_height="50px"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="15px"
+            android:src="@drawable/img_tclogo" />
+
+        <ImageView
+            android:id="@+id/iv_main_header_warning"
+            android:layout_width="22px"
+            android:layout_height="22px"
+            android:layout_marginLeft="38px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/iv_main_header_lottery"
+            android:src="@drawable/img_home_top_warning" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14px"
+            android:layout_marginTop="26px"
+            android:layout_toRightOf="@id/iv_main_header_warning"
+            android:text="购彩提示：购彩有节制，请理性投注！未满18周岁的未成年人不得购买彩票及兑奖！"
+            android:textColor="@color/live_red"
+            android:textSize="26px" />
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamTextView
+            android:id="@+id/tv_main_header_dggsw"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40px"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="26px"
+            android:text="顶呱呱试刮"
+            android:textColor="@color/main_yellow"
+            android:textSize="24px" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

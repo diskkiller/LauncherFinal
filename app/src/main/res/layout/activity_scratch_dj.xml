@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="1380px"
+        android:layout_height="830px"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_scratch_dj">
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout
+            android:id="@+id/fl_scratch_dj_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11px"
+            android:layout_marginTop="6px"
+            android:clickable="true"
+            android:padding="20px">
+
+            <ImageView
+                android:layout_width="42px"
+                android:layout_height="42px"
+                android:src="@drawable/img_dj_close" />
+
+        </com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>
+
+        <!--<View-->
+        <!--android:layout_width="1300dp"-->
+        <!--android:layout_height="710dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="80dp"-->
+        <!--android:background="@drawable/bg_scratch_dj_s" />-->
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamRelativeLayout
+            android:id="@+id/ll_scratch_dj_yp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190px"
+            android:layout_marginTop="144px"
+            android:clickable="false"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20px"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_scratch_dj_yp"
+                android:layout_width="46px"
+                android:layout_height="46px"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/img_scratch_yp" />
+
+            <TextView
+                android:id="@+id/tv_scratch_dj_yp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_scratch_dj_yp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12px"
+                android:text="申请验票"
+                android:textColor="@color/main_yellow"
+                android:textSize="24px" />
+
+        </com.zhongti.huacailauncher.widget.bamUI.BamRelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_scratch_dj_lottiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:layout_marginTop="184px"
+            android:layout_toRightOf="@id/ll_scratch_dj_yp"
+            android:text="彩票：大吉大利"
+            android:textColor="@color/black3"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_scratch_dj_lottiPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="66px"
+            android:layout_marginTop="184px"
+            android:layout_toRightOf="@id/tv_scratch_dj_lottiName"
+            android:text="面值：￥30.00"
+            android:textColor="@color/black3"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_scratch_dj_lottiAward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65px"
+            android:layout_marginTop="184px"
+            android:layout_toRightOf="@id/tv_scratch_dj_lottiPrice"
+            android:text="最高奖金：25万"
+            android:textColor="@color/black3"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_scratch_dj_lottiNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_scratch_dj_lottiName"
+            android:layout_below="@id/tv_scratch_dj_lottiName"
+            android:layout_marginRight="16px"
+            android:layout_marginTop="22px"
+            android:layout_toLeftOf="@+id/tv_scratch_dj_lottiPage"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="票号: 3502923858208003"
+            android:textColor="@color/black3"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/tv_scratch_dj_lottiPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/tv_scratch_dj_lottiAward"
+            android:layout_below="@id/tv_scratch_dj_lottiAward"
+            android:layout_marginTop="14px"
+            android:text="3/20"
+            android:textColor="@color/black3"
+            android:textSize="28px" />
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamImageView
+            android:id="@+id/iv_scratch_dj_slide_left"
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:layout_marginLeft="240px"
+            android:layout_marginTop="400px"
+            android:clickable="true"
+            android:src="@drawable/img_scratch_dj_slide_left" />
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamImageView
+            android:id="@+id/iv_scratch_dj_slide_right"
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="240px"
+            android:layout_marginTop="400px"
+            android:clickable="true"
+            android:src="@drawable/img_scratch_dj_slide_right" />
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:id="@+id/fl__scratch_dj_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="305px">
+
+            <ImageView
+                android:id="@+id/iv_scratch_dj_erCode"
+                android:layout_width="260px"
+                android:layout_height="260px"
+                tools:src="@android:color/holo_red_dark" />
+
+            <!--<com.zhongti.huacailauncher.widget.sratch.ScratchView-->
+            <!--android:id="@+id/sv_scratch_dj_erCode"-->
+            <!--android:layout_width="260dp"-->
+            <!--android:layout_height="260dp" />-->
+
+        </com.zhy.autolayout.AutoFrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100px"
+            android:text="@string/scratch_dj_bottom_rule"
+            android:textColor="@color/scratch_dj_red"
+            android:textSize="24px" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoFrameLayout>

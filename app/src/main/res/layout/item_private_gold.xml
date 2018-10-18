@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_private_item_gold_or_type"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_marginLeft="40px"
+            app:riv_oval="true"
+            tools:src="@color/black" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_private_item_gold_or_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值金豆"
+                android:textColor="@color/black2"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_private_item_gold_or_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06-06 24:23:00"
+                android:textColor="@color/black3"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/tv_private_item_gold_or_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230px"
+            android:text="￥100.00"
+            android:textColor="@color/black3"
+            android:textSize="24px" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_private_item_gold_or_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="36px"
+            android:text="＋ 1000个"
+            android:textColor="@color/black2"
+            android:textSize="32px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoFrameLayout>

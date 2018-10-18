@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="266dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="订单编号:35029238582080038888"
+        android:textColor="@color/black3"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_private_lotti1_itemgraybg">
+
+        <ImageView
+            android:id="@+id/iv_item_private_lotti_buy"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:src="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv_item_private_lotti_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="66dp"
+            android:layout_toLeftOf="@+id/tv_item_private_lotti_progress"
+            android:layout_toRightOf="@id/iv_item_private_lotti_buy"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="绿翡翠"
+            android:textColor="@color/black3"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_item_private_lotti_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_private_lotti_name"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="26dp"
+            android:layout_toLeftOf="@+id/tv_item_private_lotti_progress"
+            android:layout_toRightOf="@id/iv_item_private_lotti_buy"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="2018-06-06 24:23:00"
+            android:textColor="@color/black3"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_item_private_lotti_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="407dp"
+            android:text="进度：10/60"
+            android:textColor="@color/private_lotti_item1_red"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/tv_item_private_lotti_spend"
+            android:layout_below="@id/tv_item_private_lotti_spend"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="84dp"
+            android:text="x 60"
+            android:textColor="@color/black3"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_item_private_buy_del"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="26dp"
+            android:background="@drawable/bg_private_lotti_buy_del"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btn_item_private_buy_pw"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="36dp"
+            android:layout_toLeftOf="@+id/btn_item_private_buy_del"
+            android:background="@drawable/bg_private_lotti_buy_pw"
+            android:text="查看"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

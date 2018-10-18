@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="1380px"
+        android:layout_height="830px"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_window_about_us_out">
+
+        <com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout
+            android:id="@+id/fl_about_us_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="15px"
+            android:clickable="true"
+            android:padding="20px">
+
+            <ImageView
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:src="@drawable/img_chacha" />
+
+        </com.zhongti.huacailauncher.widget.bamUI.BamFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_about_us_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:text="关于我们"
+            android:textColor="@color/black1"
+            android:textSize="28px" />
+
+
+        <View
+            android:id="@+id/divider_about_us_top"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/tv_about_us_title"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="30px"
+            android:background="@color/black5" />
+
+        <com.zhongti.huacailauncher.widget.auto.AutoNestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divider_about_us_top"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="20px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:layout_below="@id/divider_about_us_top"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16px"
+                    android:src="@drawable/zhong_hua_logo" />
+
+                <TextView
+                    android:id="@+id/tv_about_us_version"
+                    android:layout_marginTop="16px"
+                    android:layout_gravity="center_horizontal"
+                    tools:text="华彩宝 V1.0.0"
+                    android:textColor="@color/black2"
+                    android:textSize="24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:lineSpacingExtra="3px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:text="@string/about_us"
+                    android:textColor="@color/black2"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/tv_about_us_problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16px"
+                    android:layout_marginTop="16px"
+                    android:drawableLeft="@drawable/img_about_us_blue_dot"
+                    android:drawablePadding="10px"
+                    android:textColor="@color/black2"
+                    android:textSize="24px"
+                    tools:text="产品使用问题,联系  400-008-1027" />
+
+                <TextView
+                    android:id="@+id/tv_about_us_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16px"
+                    android:layout_marginTop="16px"
+                    android:drawableLeft="@drawable/img_about_us_blue_dot"
+                    android:drawablePadding="10px"
+                    android:textColor="@color/black2"
+                    android:textSize="24px"
+                    tools:text="商务合作意向,联系  400-008-1027" />
+
+                <!--<LinearLayout-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_about_us_wechat"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableLeft="@drawable/img_about_us_blue_dot"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:textColor="@color/black2"-->
+                <!--android:textSize="24sp"-->
+                <!--tools:text="官方微信:   " />-->
+                <!---->
+                <!--<ImageView-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="200dp" />-->
+                <!--</LinearLayout>-->
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_about_us_gov"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16px"
+                    android:layout_marginTop="20px"
+                    android:drawableLeft="@drawable/img_about_us_blue_dot"
+                    android:drawablePadding="10px"
+                    android:textColor="@color/black2"
+                    android:textSize="24px"
+                    tools:text="官网地址:www.zthuacai.com" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhongti.huacailauncher.widget.auto.AutoNestedScrollView>
+
+        <ImageView
+            android:id="@+id/iv_hc_wechat"
+            android:layout_marginBottom="80px"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="200px"
+            android:src="@drawable/img_hc_wechat"
+            android:layout_height="200px" />
+
+        <TextView
+            android:layout_marginBottom="40px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10px"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:text="华彩宝官方微信"
+            android:textColor="@color/black2"
+            android:textSize="24px"
+            android:layout_height="wrap_content" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoFrameLayout>

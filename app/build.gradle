@@ -1,0 +1,178 @@
+apply plugin: 'com.android.application'
+
+def configAndroid = rootProject.ext.android
+def configDep = rootProject.ext.dependencies
+android {
+    //sign info config
+    signingConfigs {
+        debug {
+            keyAlias DEBUG_KEY_ALIAS
+            keyPassword DEBUG_KEY_PASSWORD
+            storeFile file(DEBUG_STORE_FILE_PATH)
+            storePassword DEBUG_STORE_PASSWORD
+        }
+        release {
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file(RELEASE_STORE_FILE_PATH)
+            storePassword RELEASE_STORE_PASSWORD
+        }
+    }
+    compileSdkVersion configAndroid["compileSdkVersion"]
+    buildToolsVersion configAndroid["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    //app info config
+    defaultConfig {
+        applicationId "com.zhongti.huacailauncher"
+        minSdkVersion configAndroid["minSdkVersion"]
+        targetSdkVersion configAndroid["targetSdkVersion"]
+        versionCode configAndroid["versionCode"]
+        versionName configAndroid["versionName"]
+        flavorDimensions "versionCode"
+        testInstrumentationRunner configDep["androidJUnitRunner"]
+        ndk {
+//            abiFilters "armeabi"//, "armeabi-v7a", "arm64-v8a", "x86", "mips"
+            abiFilters "arm64-v8a", "armeabi-v7a"
+        }
+        multiDexEnabled = true//支持分包
+        resConfigs "zh" //限定语言资源为中文
+    }
+
+    //build config
+    buildTypes {
+        release {
+            buildConfigField "boolean", "CRASH_DEBUG", "true"
+            buildConfigField "boolean", "LOG_DEBUG", "true"//custom some build variate
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            multiDexKeepProguard file('multidex-config.pro')
+            signingConfig signingConfigs.release
+        }
+        debug {
+            buildConfigField "boolean", "CRASH_DEBUG", "true"
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            minifyEnabled false
+            useProguard false
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            multiDexKeepProguard file('multidex-config.pro')
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    //配置jdk版本为1.8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //ignore some lint check
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+        //build release 版本 时 开启lint 检测
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LISENCE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/lisence.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/ASL2.0'
+    }
+
+    configurations {
+        all*.exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+        all*.exclude group: 'com.squareup.okio', module: 'okio'
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+
+//    productFlavors {
+//        normal {
+//            applicationId "com.zhongti.huacailauncher" //为不同版本指定的包名
+//        }
+//        mytest {
+//            applicationId "com.zhongti.huacailauncher1" //为不同版本指定的包名
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //support
+    implementation(configDep["cardview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    implementation configDep["constraint-layout"]
+    //test
+    testImplementation configDep["junit"]
+    debugImplementation configDep["canary-debug"]
+    releaseImplementation configDep["canary-release"]
+    testImplementation configDep["canary-release"]
+    //arms
+    implementation configDep["arms"]
+    //multiDex
+    implementation configDep["multidex"]
+    //tools
+    annotationProcessor configDep["dagger2-compiler"]
+    implementation configDep["progressmanager"]
+    implementation configDep["retrofit-url-manager"]
+    implementation configDep["lifecyclemodel"]
+    annotationProcessor(configDep["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+    //bugly,use to avoid crash
+    implementation configDep["bugly"]
+    implementation configDep["buglyNdk"]
+    //日志
+    implementation project(':utils')
+    //utils module
+    //UI
+    implementation configDep["fragmentation"]
+    implementation configDep["fragmentation-core"]
+    //加载占位图
+    implementation configDep["loaddir"]
+    //圆形/圆角 ImageView
+    implementation configDep["roundedImageView"]
+    //marqueeView
+    implementation configDep["marquee-view"]
+    //BaseRecyclerAdapterHelper
+    implementation configDep["adapter-helper"]
+    //refreshLayout
+    implementation configDep["smart-refresh_layout"]
+    implementation configDep["smart-refresh_header"]
+    implementation project(':photoview')
+    //lottie animation
+    implementation configDep["lottie"]
+    //sdk
+//    implementation(name: 'hcbsdk-release', ext: 'aar')
+    implementation 'com.github.diskkiller:HCB_SDK:1.2.5'
+
+    //ali player
+    implementation(name: 'AlivcReporter-1.2', ext: 'aar')
+    implementation(name: 'AlivcPlayer-3.4.6', ext: 'aar')
+    implementation(name: 'AliyunVodPlayer-3.4.6', ext: 'aar')
+}
